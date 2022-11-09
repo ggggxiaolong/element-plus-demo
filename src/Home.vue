@@ -12,7 +12,7 @@
                 >Button 按钮</el-menu-item
               >
               <el-menu-item :index="PATH.BASIC_BORDER">Border 边框</el-menu-item>
-              <el-menu-item index="1-3">Color 色彩</el-menu-item>
+              <el-menu-item :index="PATH.BASIC_COLOR">Color 色彩</el-menu-item>
               <el-menu-item index="1-4">Container 布局容器</el-menu-item>
               <el-menu-item index="1-5">Icon 图标</el-menu-item>
               <el-menu-item index="1-6">Layout 布局</el-menu-item>

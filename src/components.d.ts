@@ -9,10 +9,12 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Border: typeof import('./components/basic/Border.vue')['default']
     Button: typeof import('./components/basic/Button.vue')['default']
+    Color: typeof import('./components/basic/Color.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
     ElBacktop: typeof import('element-plus/es')['ElBacktop']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElButtonGroup: typeof import('element-plus/es')['ElButtonGroup']
+    ElCard: typeof import('element-plus/es')['ElCard']
     ElCol: typeof import('element-plus/es')['ElCol']
     ElContainer: typeof import('element-plus/es')['ElContainer']
     ElIcon: typeof import('element-plus/es')['ElIcon']
