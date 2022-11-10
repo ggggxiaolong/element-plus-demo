@@ -33,7 +33,9 @@ declare module '@vue/runtime-core' {
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
     ElTable: typeof import('element-plus/es')['ElTable']
     ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
+    Icon: typeof import('./components/basic/Icon.vue')['default']
     Index: typeof import('./components/basic/Index.vue')['default']
+    Layout: typeof import('./components/basic/Layout.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

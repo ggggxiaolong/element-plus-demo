@@ -34,6 +34,14 @@ const router = createRouter({
           path: _BASIC.CONTAINER,
           component: () => import("@/components/basic/Container.vue")
         },
+        {
+          path: _BASIC.ICON,
+          component: () => import("@/components/basic/Icon.vue")
+        },
+        {
+          path: _BASIC.LAYOUT,
+          component: () => import("@/components/basic/Layout.vue")
+        },
       ],
     },
   ],
