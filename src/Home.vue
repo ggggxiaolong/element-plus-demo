@@ -13,13 +13,13 @@
               >
               <el-menu-item :index="PATH.BASIC_BORDER">Border 边框</el-menu-item>
               <el-menu-item :index="PATH.BASIC_COLOR">Color 色彩</el-menu-item>
-              <el-menu-item index="1-4">Container 布局容器</el-menu-item>
-              <el-menu-item index="1-5">Icon 图标</el-menu-item>
-              <el-menu-item index="1-6">Layout 布局</el-menu-item>
-              <el-menu-item index="1-7">Link 链接</el-menu-item>
-              <el-menu-item index="1-8">Scrollbar 滚动条</el-menu-item>
-              <el-menu-item index="1-9">Space 间距</el-menu-item>
-              <el-menu-item index="1-10">Typography 排版</el-menu-item>
+              <el-menu-item :index="PATH.BASIC_CONTAINER">Container 布局容器</el-menu-item>
+              <el-menu-item :index="PATH.BASIC_ICON">Icon 图标</el-menu-item>
+              <el-menu-item :index="PATH.BASIC_LAYOUT">Layout 布局</el-menu-item>
+              <el-menu-item :index="PATH.BASIC_LINK">Link 链接</el-menu-item>
+              <el-menu-item :index="PATH.BASIC_SCROLLBAR">Scrollbar 滚动条</el-menu-item>
+              <el-menu-item :index="PATH.BASIC_SPACE">Space 间距</el-menu-item>
+              <el-menu-item :index="PATH.BASIC_TYPOGRAPHY">Typography 排版</el-menu-item>
             </el-menu-item-group>
           </el-sub-menu>
         </el-menu>
@@ -37,9 +37,9 @@
 </template>
 
 <script setup lang="ts">
-import {isDark, toggleDark} from './composables'
+import {isDark, toggleDark} from '@/composables'
 import { Watermelon, Sunny, Moon } from "@element-plus/icons-vue";
-import { PATH } from "./router/path";
+import { PATH } from "@/router/path";
 
 </script>
 

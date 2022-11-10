@@ -7,29 +7,33 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: import("../components/basic/Button.vue"),
+      component: import("@/components/basic/Button.vue"),
     },
     {
       path: PATH.BASIC,
       name: "basic",
-      component: () => import("../components/basic/Index.vue"),
+      component: () => import("@/components/basic/Index.vue"),
       children: [
         {
           path: "",
-          component: () => import("../components/basic/Button.vue"),
+          component: () => import("@/components/basic/Button.vue"),
         },
         {
           path: _BASIC.BUTTON,
-          component: () => import("../components/basic/Button.vue"),
+          component: () => import("@/components/basic/Button.vue"),
         },
         {
           path: _BASIC.BORDER,
-          component: () => import("../components/basic/Border.vue"),
+          component: () => import("@/components/basic/Border.vue"),
         },
         {
           path: _BASIC.COLOR,
-          component: () => import("~/components/basic/Color.vue")
-        }
+          component: () => import("@/components/basic/Color.vue")
+        },
+        {
+          path: _BASIC.CONTAINER,
+          component: () => import("@/components/basic/Container.vue")
+        },
       ],
     },
   ],
