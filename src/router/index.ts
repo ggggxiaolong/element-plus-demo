@@ -42,6 +42,10 @@ const router = createRouter({
           path: _BASIC.LAYOUT,
           component: () => import("@/components/basic/Layout.vue")
         },
+        {
+          path: _BASIC.LINK,
+          component: () => import("@/components/basic/Link.vue")
+        },
       ],
     },
   ],
