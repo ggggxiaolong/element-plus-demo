@@ -12,10 +12,10 @@ const router = createRouter({
     {
       path: PATH.BASIC,
       name: "basic",
-      component: () => import("@/components/basic/Index.vue"),
+      redirect: PATH.BASIC_BUTTON,
       children: [
         {
-          path: "",
+          path: "/",
           component: () => import("@/components/basic/Button.vue"),
         },
         {
@@ -49,6 +49,10 @@ const router = createRouter({
         {
           path: _BASIC.SCROLLBAR,
           component: () => import("@/components/basic/Scrollbar.vue")
+        },
+        {
+          path: _BASIC.SPACE,
+          component: () => import("@/components/basic/Space.vue")
         },
       ],
     },
