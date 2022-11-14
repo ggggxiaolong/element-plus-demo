@@ -46,6 +46,10 @@ const router = createRouter({
           path: _BASIC.LINK,
           component: () => import("@/components/basic/Link.vue")
         },
+        {
+          path: _BASIC.SCROLLBAR,
+          component: () => import("@/components/basic/Scrollbar.vue")
+        },
       ],
     },
   ],
