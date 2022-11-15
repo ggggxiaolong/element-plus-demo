@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import { PATH, _BASIC } from "./path";
+import { PATH, _BASIC, _CONFIG } from "./path";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -28,35 +28,45 @@ const router = createRouter({
         },
         {
           path: _BASIC.COLOR,
-          component: () => import("@/components/basic/Color.vue")
+          component: () => import("@/components/basic/Color.vue"),
         },
         {
           path: _BASIC.CONTAINER,
-          component: () => import("@/components/basic/Container.vue")
+          component: () => import("@/components/basic/Container.vue"),
         },
         {
           path: _BASIC.ICON,
-          component: () => import("@/components/basic/Icon.vue")
+          component: () => import("@/components/basic/Icon.vue"),
         },
         {
           path: _BASIC.LAYOUT,
-          component: () => import("@/components/basic/Layout.vue")
+          component: () => import("@/components/basic/Layout.vue"),
         },
         {
           path: _BASIC.LINK,
-          component: () => import("@/components/basic/Link.vue")
+          component: () => import("@/components/basic/Link.vue"),
         },
         {
           path: _BASIC.SCROLLBAR,
-          component: () => import("@/components/basic/Scrollbar.vue")
+          component: () => import("@/components/basic/Scrollbar.vue"),
         },
         {
           path: _BASIC.SPACE,
-          component: () => import("@/components/basic/Space.vue")
+          component: () => import("@/components/basic/Space.vue"),
         },
         {
           path: _BASIC.TYPOGRAPHY,
-          component: () => import("@/components/basic/Typography.vue")
+          component: () => import("@/components/basic/Typography.vue"),
+        },
+      ],
+    },
+    {
+      path: PATH.CONFIG,
+      redirect: PATH.CONFIG_CONFIG,
+      children: [
+        {
+          path: _CONFIG.CONFIG,
+          component: () => import("@/components/config/Config.vue"),
         },
       ],
     },

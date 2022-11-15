@@ -11,14 +11,18 @@ import {
 } from "unocss";
 import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
-
-const pathSrc = path.resolve(__dirname, "src");
+//Vue3 + Vite2 + ElementPlus + TS 项目常见问题 https://bbchin.com/archives/vite2vue3ts
+import {
+  createStyleImportPlugin,
+  ElementPlusResolve,
+} from 'vite-plugin-style-import'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "./",
   resolve: {
     alias: {
-      "@": `${pathSrc}`,
+      "@": path.resolve(__dirname, "src"),
     },
   },
   css: {
@@ -52,6 +56,18 @@ export default defineConfig({
         }),
       ],
       transformers: [transformerDirectives(), transformerVariantGroup()],
+    }),
+    createStyleImportPlugin({
+      resolves: [ElementPlusResolve()],
+      libs: [
+        {
+          libraryName: 'element-plus',
+          esModule: true,
+          resolveStyle: (name: string) => {
+            return `element-plus/theme-chalk/${name}.css`
+          },
+        },
+      ]
     }),
   ],
 });

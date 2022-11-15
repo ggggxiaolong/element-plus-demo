@@ -155,7 +155,7 @@
 <script setup lang="ts">
 import { ref, h } from "vue";
 import { ElDivider } from "element-plus";
-import "element-plus/theme-chalk/src/divider.scss";
+// import "element-plus/theme-chalk/src/divider.scss";
 const size = ref("default");
 const slideSize = ref(20);
 const fill = ref(false);

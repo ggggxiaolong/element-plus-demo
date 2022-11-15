@@ -22,6 +22,15 @@
               <el-menu-item :index="PATH.BASIC_TYPOGRAPHY">Typography 排版</el-menu-item>
             </el-menu-item-group>
           </el-sub-menu>
+
+          <el-sub-menu index="2">
+            <template #title>
+              <el-icon><pear/></el-icon>配置组件
+            </template>
+            <el-menu-item-group>
+              <el-menu-item :index="PATH.CONFIG_CONFIG">Config Provider 全局配置</el-menu-item>
+            </el-menu-item-group>
+          </el-sub-menu>
         </el-menu>
       </el-scrollbar>
     </el-aside>
@@ -38,7 +47,7 @@
 
 <script setup lang="ts">
 import {isDark, toggleDark} from '@/composables'
-import { Watermelon, Sunny, Moon } from "@element-plus/icons-vue";
+import { Watermelon, Sunny, Moon, Pear } from "@element-plus/icons-vue";
 import { PATH } from "@/router/path";
 
 </script>

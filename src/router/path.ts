@@ -10,17 +10,24 @@ export class PATH {
   static BASIC_SCROLLBAR: string = "/basic/scrollbar";
   static BASIC_SPACE: string = "/basic/space";
   static BASIC_TYPOGRAPHY: string = "/basic/typography";
+
+  static CONFIG: string = "/config";
+  static CONFIG_CONFIG: string = "/config/config-provider";
 }
 
 export class _BASIC {
   static BUTTON: string = "button";
   static BORDER: string = "border";
   static COLOR: string = "color";
-  static CONTAINER: string = "container"
-  static ICON: string = "icon"
-  static LAYOUT: string = "layout"
-  static LINK: string = "link"
-  static SCROLLBAR: string = "scrollbar"
-  static SPACE: string = "space"
-  static TYPOGRAPHY: string = "typography"
+  static CONTAINER: string = "container";
+  static ICON: string = "icon";
+  static LAYOUT: string = "layout";
+  static LINK: string = "link";
+  static SCROLLBAR: string = "scrollbar";
+  static SPACE: string = "space";
+  static TYPOGRAPHY: string = "typography";
+}
+
+export class _CONFIG {
+  static CONFIG: string = "config-provider";
 }
