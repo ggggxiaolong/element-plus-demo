@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import { PATH, _BASIC, _CONFIG } from "./path";
+import { PATH, _BASIC, _CONFIG, _FORM } from "./path";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -67,6 +67,16 @@ const router = createRouter({
         {
           path: _CONFIG.CONFIG,
           component: () => import("@/components/config/Config.vue"),
+        },
+      ],
+    },
+    {
+      path: PATH.FORM,
+      redirect: PATH.FORM_AUTOCOMPLETE,
+      children: [
+        {
+          path: _FORM.AUTOCOMPLETE,
+          component: () => import("@/components/form/Autocomplete.vue"),
         },
       ],
     },

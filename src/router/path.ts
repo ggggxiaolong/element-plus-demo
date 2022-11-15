@@ -13,6 +13,9 @@ export class PATH {
 
   static CONFIG: string = "/config";
   static CONFIG_CONFIG: string = "/config/config-provider";
+
+  static FORM: string = "/form";
+  static FORM_AUTOCOMPLETE: string = "/form/autocomplete";
 }
 
 export class _BASIC {
@@ -30,4 +33,8 @@ export class _BASIC {
 
 export class _CONFIG {
   static CONFIG: string = "config-provider";
+}
+
+export class _FORM {
+  static AUTOCOMPLETE: string = "autocomplete"
 }

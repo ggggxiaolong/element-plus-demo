@@ -7,12 +7,14 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Autocomplete: typeof import('./components/form/Autocomplete.vue')['default']
     Border: typeof import('./components/basic/Border.vue')['default']
     Button: typeof import('./components/basic/Button.vue')['default']
     Color: typeof import('./components/basic/Color.vue')['default']
     Config: typeof import('./components/config/Config.vue')['default']
     Container: typeof import('./components/basic/Container.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
+    ElAutocomplete: typeof import('element-plus/es')['ElAutocomplete']
     ElBacktop: typeof import('element-plus/es')['ElBacktop']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElButtonGroup: typeof import('element-plus/es')['ElButtonGroup']
