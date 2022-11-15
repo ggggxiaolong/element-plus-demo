@@ -47,5 +47,6 @@ declare module '@vue/runtime-core' {
     RouterView: typeof import('vue-router')['RouterView']
     Scrollbar: typeof import('./components/basic/Scrollbar.vue')['default']
     Space: typeof import('./components/basic/Space.vue')['default']
+    Typography: typeof import('./components/basic/Typography.vue')['default']
   }
 }

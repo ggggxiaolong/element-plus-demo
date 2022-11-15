@@ -54,6 +54,10 @@ const router = createRouter({
           path: _BASIC.SPACE,
           component: () => import("@/components/basic/Space.vue")
         },
+        {
+          path: _BASIC.TYPOGRAPHY,
+          component: () => import("@/components/basic/Typography.vue")
+        },
       ],
     },
   ],
