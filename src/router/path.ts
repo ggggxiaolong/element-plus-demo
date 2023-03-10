@@ -16,6 +16,9 @@ export class PATH {
 
   static FORM: string = "/form";
   static FORM_AUTOCOMPLETE: string = "/form/autocomplete";
+
+  static E_CHARTS: string = "/eCharts"
+  static E_CHARTS_GEO_SVG: string = "/eCharts/geo-svg"
 }
 
 export class _BASIC {
@@ -37,4 +40,8 @@ export class _CONFIG {
 
 export class _FORM {
   static AUTOCOMPLETE: string = "autocomplete"
+}
+
+export class _E_CHARTS {
+  static GEO_SVG: string = "geo-svg"
 }

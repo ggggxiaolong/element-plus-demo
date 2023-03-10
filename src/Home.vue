@@ -1,6 +1,6 @@
 <template>
   <el-container class="layout-container">
-    <el-aside width="200px">
+    <el-aside width="300px">
       <el-scrollbar>
         <el-menu :default-openeds="['1']" router>
           <el-sub-menu index="1">
@@ -40,6 +40,15 @@
               <el-menu-item :index="PATH.FORM_AUTOCOMPLETE">Autocomplete 自动补全输入框</el-menu-item>
             </el-menu-item-group>
           </el-sub-menu>
+
+          <el-sub-menu index="4">
+            <template #title>
+              <el-icon><PieChart /></el-icon>eCharts
+            </template>
+            <el-menu-item-group>
+              <el-menu-item :index="PATH.E_CHARTS_GEO_SVG">geo svg</el-menu-item>
+            </el-menu-item-group>
+          </el-sub-menu>
         </el-menu>
       </el-scrollbar>
     </el-aside>
@@ -56,7 +65,7 @@
 
 <script setup lang="ts">
 import {isDark, toggleDark} from '@/composables'
-import { Watermelon, Sunny, Moon, Pear, Sugar } from "@element-plus/icons-vue";
+import { Watermelon, Sunny, Moon, Pear, Sugar, PieChart } from "@element-plus/icons-vue";
 import { PATH } from "@/router/path";
 
 </script>

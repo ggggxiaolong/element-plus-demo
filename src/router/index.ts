@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import { PATH, _BASIC, _CONFIG, _FORM } from "./path";
+import { PATH, _BASIC, _CONFIG, _E_CHARTS, _FORM } from "./path";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -77,6 +77,16 @@ const router = createRouter({
         {
           path: _FORM.AUTOCOMPLETE,
           component: () => import("@/components/form/Autocomplete.vue"),
+        },
+      ],
+    },
+    {
+      path: PATH.E_CHARTS,
+      redirect: PATH.E_CHARTS_GEO_SVG,
+      children: [
+        {
+          path: _E_CHARTS.GEO_SVG,
+          component: () => import("@/components/e-charts/GeoSvg.vue"),
         },
       ],
     },
