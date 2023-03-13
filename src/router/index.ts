@@ -86,7 +86,7 @@ const router = createRouter({
       children: [
         {
           path: _E_CHARTS.GEO_SVG,
-          component: () => import("@/components/e-charts/GeoSvg.vue"),
+          component: () => import("@/components/e-charts/GeoSvgO.vue"),
         },
       ],
     },

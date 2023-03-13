@@ -1,5 +1,5 @@
 <template>
-  <v-chart @click="handleClick" @zr:click="handleAddClick" ref="chartInstance"> </v-chart>
+  <v-chart @zr:click="handleAddClick" :option="option" ref="chartInstance"> </v-chart>
 </template>
 <script setup lang="ts">
 import { use } from "echarts/core";
@@ -18,6 +18,7 @@ const data: Ref<Array<Array<number>>> = ref(Array(
         [1372.98925630313, 477.3839988649537, 1],
         [1378.62251255796, 935.6708486282843, 1],
 ));
+const option: Ref<ECBasicOption|undefined> = ref()
 const chartOption = computed(function(){
   return {
     tooltip: {},
@@ -129,16 +130,12 @@ const chartOption = computed(function(){
   }
 });
 const chartInstance: Ref<EChartsType|undefined> = ref()
-const op: ECBasicOption = {
-    
-  };
-
 onMounted(function () {
   fetch("/Map_of_Iceland.svg").then((res) => res.text()).then(async (svg) => {
     echarts.registerMap("iceland_svg", { svg: svg });
     await nextTick();
     // echarts.
-    chartInstance.value?.setOption(chartOption.value);
+    option.value = chartOption.value;
   });
 });
 
@@ -148,14 +145,19 @@ function handleClick(params: ECElementEvent){
 }
 
 function handleAddClick(params: ElementEvent){
-    if (params.target === undefined){
+    // if (params.target === undefined){
         const point = chartInstance.value?.convertFromPixel("geo",[params.offsetX, params.offsetY]);
         if(point && point[0] > 0 && point[1] > 0){
+          const start = Date.now();
           changeState(point)
+          console.log(Date.now() - start);
+          
           // data.value.push(Array(point[0], point[1], 1));
           // chartInstance.value?.setOption(chartOption.value);
+        } else{
+          console.log(point);
         }
-    }
+    // }
 }
 
 function changeState(point: number[]){
@@ -175,6 +177,7 @@ function changeState(point: number[]){
     data.value.splice(index, 1);
   }
   console.log(data.value);
-  chartInstance.value?.setOption(chartOption.value);
+  // chartInstance.value?.setOption(chartOption.value);
+  option.value = chartOption.value;
 }
 </script>
